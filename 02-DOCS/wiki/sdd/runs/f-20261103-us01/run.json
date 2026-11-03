@@ -1,0 +1,19 @@
+{
+  "runId": "f-20261103-us01",
+  "storyId": "US-01",
+  "title": "Autenticación social OAuth con Auth0 para UNA Chat (Local y Vercel)",
+  "status": "RELEASED",
+  "createdAt": "2026-11-03T08:55:00.000-06:00",
+  "updatedAt": "2026-11-03T17:56:24.348Z",
+  "branch": "factory/f-20261103-us01-auth0",
+  "gates": {
+    "intake": true,
+    "specApproved": true,
+    "tddGreen": true,
+    "reviewsCompleted": true,
+    "approved": true,
+    "classified": true,
+    "released": true
+  },
+  "completedAt": "2026-11-03T17:56:24.411Z"
+}

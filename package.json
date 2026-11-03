@@ -1,0 +1,41 @@
+{
+  "name": "una-chat",
+  "private": true,
+  "version": "1.0.0",
+  "description": "UNA Chat — Aplicación de mensajería en tiempo real con autenticación social OAuth (Auth0) y Software Factory Harness (Laboratorio 8 - UNA Campus Nicoya)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "factory": "node factory/bin/factory.mjs",
+    "factory:intake": "node factory/bin/factory.mjs intake",
+    "factory:spec-check": "node factory/bin/factory.mjs spec-check",
+    "factory:worktree": "node factory/bin/factory.mjs worktree",
+    "factory:review-open": "node factory/bin/factory.mjs review-open",
+    "factory:approve": "node factory/bin/factory.mjs approve",
+    "factory:classify": "node factory/bin/factory.mjs classify",
+    "factory:release": "node factory/bin/factory.mjs release",
+    "factory:done": "node factory/bin/factory.mjs done"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^2.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+

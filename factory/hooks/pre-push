@@ -1,0 +1,5 @@
+#!/bin/sh
+# Software Factory Fail-Closed Pre-Push Hook
+node factory/hooks/enforce-factory-policy.mjs
+npm test
+

@@ -1,0 +1,16 @@
+{
+  "runId": "f-20261103-us01",
+  "storyId": "US-01",
+  "approved": true,
+  "approvedAt": "2026-11-03T17:56:24.253Z",
+  "reviewers": {
+    "security": "PASS",
+    "ux": "PASS",
+    "ui": "PASS",
+    "code": "PASS"
+  },
+  "verdict": "Cumple todos los criterios de aceptación de US-01 y políticas de seguridad SDD.",
+  "riskClassification": "LOW",
+  "releaseStrategy": "ASSISTED_MERGE_TO_MAIN",
+  "classifiedAt": "2026-11-03T17:56:24.345Z"
+}

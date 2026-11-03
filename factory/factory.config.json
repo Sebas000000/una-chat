@@ -1,0 +1,70 @@
+{
+  "project": "una-chat",
+  "version": "1.0.0",
+  "methodology": "rsc-harness-software-factory",
+  "paths": {
+    "constitution": "02-DOCS/wiki/sdd/constitution.md",
+    "runsDir": "02-DOCS/wiki/sdd/runs",
+    "hooksDir": "factory/hooks",
+    "worktreesDir": ".worktrees"
+  },
+  "branches": {
+    "main": "main",
+    "protected": ["main", "master"],
+    "workBranchPrefix": "factory/"
+  },
+  "commands": {
+    "test": "npm test",
+    "build": "npm run build",
+    "verify": "npm test && npm run build"
+  },
+  "policies": {
+    "failClosed": true,
+    "requireSpecBeforeCode": true,
+    "requireFourReviewers": true,
+    "protectLedgers": ["run.json", "approval.json"],
+    "forbidSecretsInRepo": true,
+    "denyAgentHumanBypass": true
+  },
+  "roles": {
+    "intake": {
+      "description": "Registra el run-id y crea el ledger inicial en 02-DOCS/wiki/sdd/runs/",
+      "model": "inherit"
+    },
+    "specWriter": {
+      "description": "Redacta la especificación técnica (spec.md) alineada con la constitución del sistema",
+      "model": "inherit"
+    },
+    "builder": {
+      "description": "Implementa la historia en una rama/worktree aislado bajo ciclo TDD (Red-Green-Refactor)",
+      "model": "inherit"
+    },
+    "reviewers": [
+      {
+        "id": "security",
+        "name": "Security Reviewer",
+        "focus": "Validación de flujos OAuth 2.0/OIDC con PKCE, ausencia de Client Secrets en SPA, variables en .env.example y protección de rutas."
+      },
+      {
+        "id": "ux",
+        "name": "UX Reviewer",
+        "focus": "Mensajes claros en español ante cancelación de login (access_denied) o errores de red, botones de reintento y redirección fluida."
+      },
+      {
+        "id": "ui",
+        "name": "UI Reviewer",
+        "focus": "Coherencia visual institucional con el tema UNA Chat (rojo/azul académico), tarjeta de perfil con avatar, nombre y botón de cierre de sesión."
+      },
+      {
+        "id": "code",
+        "name": "Code Reviewer",
+        "focus": "Tipado estricto en TypeScript/React, desacoplamiento de configuración Auth0 y cobertura de pruebas unitarias/integración con Vitest y Testing Library."
+      }
+    ],
+    "approver": {
+      "description": "Evalúa los 4 reportes de revisión, emite approval.json y clasifica el riesgo de release (Low / High)",
+      "model": "inherit"
+    }
+  }
+}
+

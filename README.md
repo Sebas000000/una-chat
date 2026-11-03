@@ -35,15 +35,15 @@ Este proyecto implementa la historia de usuario **US-01 (Autenticación Social O
 4. En la misma pestaña **Settings**, desplázate a **Application URIs** y configura las URLs para entorno local y producción en Vercel (separadas por coma):
    - **Allowed Callback URLs:**
      ```text
-     http://localhost:5173, http://localhost:3000, https://una-chat.vercel.app
+     http://localhost:5173, http://localhost:3000, https://una-chat-zeta.vercel.app
      ```
    - **Allowed Logout URLs:**
      ```text
-     http://localhost:5173, http://localhost:3000, https://una-chat.vercel.app
+     http://localhost:5173, http://localhost:3000, https://una-chat-zeta.vercel.app
      ```
    - **Allowed Web Origins:**
      ```text
-     http://localhost:5173, http://localhost:3000, https://una-chat.vercel.app
+     http://localhost:5173, http://localhost:3000, https://una-chat-zeta.vercel.app
      ```
    *(Reemplaza `https://una-chat.vercel.app` por el dominio exacto que te asigne Vercel si es diferente).*
 5. Haz clic en **Save Changes**.

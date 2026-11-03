@@ -27,3 +27,6 @@ Thumbs.db
 # Worktrees temporales locales
 .worktrees/
 
+
+.vercel
+.env*
